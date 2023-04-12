@@ -1,4 +1,10 @@
 package com.system.helpdesk.dto;
 
-public record UserAuthentication(String login, String password) {
+import jakarta.validation.constraints.NotBlank;
+
+public record UserAuthentication(
+        @NotBlank
+        String login,
+        @NotBlank
+        String password) {
 }
