@@ -3,7 +3,12 @@
 Api para abertura e fechamento de chamados. 
 
 ## ⚙️ Funcionalidades
-
+- [x] Criação da classe Usuario.
+- [x] Classe Roles;
+- [x] Autenticação pelo tokenJWT.
+- [x] Permissão de usuario ADMIN/USER.
+- [x] SpringSecurity
+- 
 ## 🛠 Tecnologias
 
 As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:

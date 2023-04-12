@@ -12,8 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Table(name = "usuario")
-@Entity(name = "Usuario")
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
@@ -27,12 +26,6 @@ public class User implements UserDetails {
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "user_roles",
-            joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "nameRole"))
     private List<Role> roles;
 
     @Override
