@@ -5,9 +5,10 @@ Api para abertura e fechamento de chamados.
 ## ⚙️ Funcionalidades
 - [x] Criação da classe Usuario.
 - [x] Classe Roles;
-- [x] Autenticação pelo tokenJWT.
+- [x] Autenticação com tokenJWT Auth0.
 - [x] Permissão de usuario ADMIN/USER.
 - [x] SpringSecurity
+- [x] Criptografar a senha com Bcrypt.
 - 
 ## 🛠 Tecnologias
 

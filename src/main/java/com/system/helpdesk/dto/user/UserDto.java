@@ -1,8 +1,7 @@
-package com.system.helpdesk.dto;
-
+package com.system.helpdesk.dto.user;
 import jakarta.validation.constraints.NotBlank;
 
-public record UserAuthentication(
+public record UserDto(
         @NotBlank
         String login,
         @NotBlank
