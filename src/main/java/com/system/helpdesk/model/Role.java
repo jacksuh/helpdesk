@@ -1,5 +1,6 @@
 package com.system.helpdesk.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
@@ -8,7 +9,7 @@ import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import java.util.List;
 
-@Entity
+@Entity(name = "Role")
 @Getter
 @Setter
 public class Role implements GrantedAuthority {

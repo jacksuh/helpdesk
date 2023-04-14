@@ -29,7 +29,12 @@ public class SecurityConfigurations {
                 .requestMatchers(HttpMethod.GET, "/login").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.DELETE, "/login").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.PUT, "/login").permitAll()
+                .requestMatchers(HttpMethod.DELETE, "/ticket/{}").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.POST, "/ticket").permitAll()
+                .requestMatchers(HttpMethod.GET, "/ticket").permitAll()
+                .requestMatchers(HttpMethod.PUT, "/ticket/{}").hasRole("ADMIN")
                 .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
+
                 .anyRequest().authenticated()
                 .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();

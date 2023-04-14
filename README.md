@@ -9,7 +9,15 @@ Api para abertura e fechamento de chamados.
 - [x] Permissão de usuario ADMIN/USER.
 - [x] SpringSecurity
 - [x] Criptografar a senha com Bcrypt.
-- 
+- [x] classe ticket.
+- [x] Abertura de ticket.
+- [x] Classe Enum com o status dos chamados.
+- [x] Relacionamento OneToMany e ManyToOne.
+- [x] Gerador de protocolo automatico.
+- [x] Utilização de JsonIgnore para campos sensiveis e @JsonBackReference.
+
+
+
 ## 🛠 Tecnologias
 
 As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
