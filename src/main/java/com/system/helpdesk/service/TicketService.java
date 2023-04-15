@@ -3,6 +3,7 @@ package com.system.helpdesk.service;
 import com.system.helpdesk.dto.ticket.TicketDto;
 import com.system.helpdesk.dto.ticket.TicketSolutionDto;
 import com.system.helpdesk.dto.user.UserDto;
+import com.system.helpdesk.exception.ValidationException;
 import com.system.helpdesk.model.Ticket;
 import com.system.helpdesk.model.User;
 import com.system.helpdesk.repository.TicketRepository;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 

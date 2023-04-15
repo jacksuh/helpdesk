@@ -1,18 +1,16 @@
 package com.system.helpdesk.service;
 import com.system.helpdesk.dto.user.UserDto;
+import com.system.helpdesk.exception.ValidationException;
 import com.system.helpdesk.model.User;
 import com.system.helpdesk.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
-
 import java.util.Optional;
 
 @Service
@@ -34,10 +32,15 @@ public class AutenticationService implements UserDetailsService {
     }
 
     public User saveUser(UserDto dto) {
-        User u = new User();
-        u.setLogin(dto.login());
-        u.setPassword(encoder.encode(dto.password()));
-        return repository.save(u);
+        UserDetails login = repository.findByLogin(dto.login());
+        if (login != null) {
+            throw new ValidationException("login already exists!");
+        }else {
+            User u = new User();
+            u.setLogin(dto.login());
+            u.setPassword(encoder.encode(dto.password()));
+            return repository.save(u);
+        }
     }
 
     public User updateUser(UserDto dto, Long id) {

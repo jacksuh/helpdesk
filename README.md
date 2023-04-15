@@ -15,7 +15,8 @@ Api para abertura e fechamento de chamados.
 - [x] Relacionamento OneToMany e ManyToOne.
 - [x] Gerador de protocolo automatico.
 - [x] Utilização de JsonIgnore para campos sensiveis e @JsonBackReference.
-
+- [x] Validação não deixar cadastrar usuario já registrado no banco.
+- [x] Teste automatizado com mock classe Ticket.
 
 
 ## 🛠 Tecnologias
