@@ -19,6 +19,19 @@ Api para abertura e fechamento de chamados.
 - [x] Teste automatizado com mock classe Ticket.
 - [x] DOC Swagger.
 
+## Usuario:
+Cadastro de usuario
+Listar usuarios somente para usuario com permissão ADMIN.
+Atualizar usuario.
+Excluir Usuario somente para usuario com permissão ADMIN.
+
+## Ticket:
+Abertura de chamado.
+Listar chamados
+Atualizar chamados.
+Excluir chamado, somente para usuario com permissão ADMIN.
+
+
 
 ## 🛠 Tecnologias
 
