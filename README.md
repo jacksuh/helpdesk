@@ -1,6 +1,6 @@
 ## 💻 Sobre o projeto
 
-Api para abertura e fechamento de chamados. 
+Api HelpDesk para abertura e fechamento de chamados. 
 
 ## ⚙️ Funcionalidades
 - [x] Criação da classe Usuario.
@@ -35,15 +35,13 @@ Excluir chamado, somente para usuario com permissão ADMIN.
 ## Executar o projeto
 Dentro do diretorio utilizando o terminal digite:
 
-#mvn clean install.
+# mvn clean install.
 
 Finalizando com sucesso
 
-![img.png](img.png)
+## Execute.
 
-Execute.
-
-#mvn spring-boot:run
+# mvn spring-boot:run
 
 ## 🛠 Tecnologias
 
