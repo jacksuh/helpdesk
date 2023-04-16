@@ -32,6 +32,18 @@ Atualizar chamados.
 Excluir chamado, somente para usuario com permissão ADMIN.
 
 
+## Executar o projeto
+Dentro do diretorio utilizando o terminal digite:
+
+#mvn clean install.
+
+Finalizando com sucesso
+
+![img.png](img.png)
+
+Execute.
+
+#mvn spring-boot:run
 
 ## 🛠 Tecnologias
 
