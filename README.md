@@ -9,7 +9,7 @@ Api HelpDesk para abertura e fechamento de chamados.
 - [x] Permissão de usuario ADMIN/USER.
 - [x] SpringSecurity
 - [x] Criptografar a senha com Bcrypt.
-- [x] classe ticket.
+- [x] Classe ticket.
 - [x] Abertura de ticket.
 - [x] Classe Enum com o status dos chamados.
 - [x] Relacionamento OneToMany e ManyToOne.
