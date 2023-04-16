@@ -20,9 +20,9 @@ Api para abertura e fechamento de chamados.
 - [x] DOC Swagger.
 
 ## Usuario:
-Cadastro de usuario
-Listar usuarios somente para usuario com permissão ADMIN.
-Atualizar usuario.
+Cadastro de usuario<br>
+Listar usuarios somente para usuario com permissão ADMIN.<br>
+Atualizar usuario.<br>
 Excluir Usuario somente para usuario com permissão ADMIN.
 
 ## Ticket:
