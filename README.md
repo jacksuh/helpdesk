@@ -26,9 +26,9 @@ Atualizar usuario.<br>
 Excluir Usuario somente para usuario com permissão ADMIN.
 
 ## Ticket:
-Abertura de chamado.
-Listar chamados
-Atualizar chamados.
+Abertura de chamado.<br>
+Listar chamados.<br>
+Atualizar chamados.<br>
 Excluir chamado, somente para usuario com permissão ADMIN.
 
 
