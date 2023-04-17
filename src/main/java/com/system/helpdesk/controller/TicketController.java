@@ -6,6 +6,8 @@ import com.system.helpdesk.model.Ticket;
 import com.system.helpdesk.service.TicketService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -21,6 +23,7 @@ public class TicketController {
     private TicketService service;
 
     @PostMapping
+    @CacheEvict(value = "ticket", allEntries = true)
     public ResponseEntity createdTicket(@RequestBody @Valid TicketDto dto, UriComponentsBuilder uriBuilder) {
         Ticket t = service.saveTicket(dto);
         var uri = uriBuilder.path("/user/{id}").buildAndExpand(t.getNumberTicket()).toUri();
@@ -29,12 +32,14 @@ public class TicketController {
 
 
     @GetMapping
+    @Cacheable(value = "ticket")
     public ResponseEntity<Page<Ticket>> getAllTicket(@PageableDefault(sort = "id", page = 0, size = 10) Pageable page){
         Page<Ticket> listTicket = service.getAll(page);
         return ResponseEntity.ok(listTicket);
     }
 
     @PutMapping("/{id}")
+    @CacheEvict(value = "ticket", allEntries = true)
     public ResponseEntity updateTicket(@PathVariable("id") Long id, @RequestBody TicketSolutionDto dto){
         Ticket t = service.updateTicket(dto,id);
 
@@ -43,6 +48,7 @@ public class TicketController {
     }
 
     @DeleteMapping("/{id}")
+    @CacheEvict(value = "ticket", allEntries = true)
     public ResponseEntity deleteTicket(@PathVariable Long id){
         service.deleteTicket(id);
         return ResponseEntity.ok().build();
