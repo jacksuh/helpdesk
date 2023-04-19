@@ -1,5 +1,4 @@
 package com.system.helpdesk.model;
-import com.fasterxml.jackson.annotation.*;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -23,6 +22,7 @@ public class Ticket {
 
     private String solution;
 
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     private String userclosed;
